@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영화 포스터 분석 및 고전 영화 추천</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header class="header">
+            <h1 class="title">영화 포스터 분석 및 고전 영화 추천</h1>
+        </header>
+        
+        <section class="card uploader-section">
+            <div class="image-uploader">
+                <input type="file" accept="image/*" id="poster-upload" class="file-input">
+                <label for="poster-upload" class="upload-label">
+                    <span class="material-icons">cloud_upload</span>
+                    영화 포스터 업로드
+                </label>
+            </div>
+            <div id="file-name" class="file-name"></div>
+            <div id="image-preview" class="image-preview"></div>
+        </section>
+
+        <section class="card action-section">
+            <button type="submit" class="analyze-btn">
+                <span class="material-icons">movie_filter</span>
+                분석 시작
+            </button>
+        </section>
+
+        <section class="card result-section">
+            <div class="output"></div>
+        </section>
+    </main>
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-analytics.js"></script>
+    
+    <!-- Firebase Functions -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-functions.js"></script>
+
+    <!-- Markdown-it for rendering markdown -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/12.3.2/markdown-it.min.js"></script>
+
+    <!-- Your main script -->
+    <script src="main.js"></script>
+</body>
+</html>
